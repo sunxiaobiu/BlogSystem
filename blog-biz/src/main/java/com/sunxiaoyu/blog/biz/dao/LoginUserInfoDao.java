@@ -14,7 +14,7 @@ public interface LoginUserInfoDao {
     @Insert("insert into LoginUserInfo" +
             "(UserID,UserName,PassWord,NickName,Ip,LoginStatus)" +
             "values(#{userID},#{userName},#{passWord},#{nickName},#{ip},#{loginStatus})")
-    public void insertLoginUserInfo(LoginUserInfoModel loginUserInfoModel);
+    public LoginUserInfoModel insertLoginUserInfo(LoginUserInfoModel loginUserInfoModel);
 
     @Delete("delete from LoginUserInfo where UserID = #{userID}")
     public void deleteLoginUserInfo(int userID);
