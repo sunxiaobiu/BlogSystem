@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+    <mappers>
+        <mapper class="com.sunxiaoyu.blog.biz.dao.LoginUserInfoDao"/>
+        <mapper class="com.sunxiaoyu.blog.biz.dao.UserDetailInfoDao"/>
+        <mapper class="com.sunxiaoyu.blog.biz.dao.TalkShowInfoDao"/>
+        <mapper class="com.sunxiaoyu.blog.biz.dao.BlogInfoDao"/>
+        <mapper class="com.sunxiaoyu.blog.biz.dao.UserFriendInfoDao"/>
+        <mapper class="com.sunxiaoyu.blog.biz.dao.UserPictureInfoDao"/>
+    </mappers>
+
+</configuration>
