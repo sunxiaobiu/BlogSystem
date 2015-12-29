@@ -2,7 +2,7 @@ package com.sunxiaoyu.blog.dao;
 
 import com.sunxiaoyu.blog.AbstractTest;
 import com.sunxiaoyu.blog.biz.dao.*;
-import com.sunxiaoyu.blog.biz.model.*;
+import com.sunxiaoyu.blog.model.*;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -23,9 +23,6 @@ public class LoginUserInfoDaoTest extends AbstractTest {
     private TalkShowInfoDao talkShowInfoDao;
 
     @Autowired
-    private UserDetailInfoDao userDetailInfoDao;
-
-    @Autowired
     private UserFriendInfoDao userFriendInfoDao;
 
     @Autowired
@@ -39,25 +36,27 @@ public class LoginUserInfoDaoTest extends AbstractTest {
 //        loginUserInfoModel.setNickName("biubiubiu");
 //        loginUserInfoModel.setLoginStatus(2);
 //        loginUserInfoModel.setPassWord("qtfrmszsxy");
+//        loginUserInfoModel.setNickName("sunxiaobiu90909");
+//        loginUserInfoModel.setLoginStatus(1);
+//        loginUserInfoModel.setAddress("sjsjsjsj");
+//        loginUserInfoModel.setEmail("sjsjsjsjsj");
+//        loginUserInfoModel.setIntroduce("sjjsjsjsj");
+//        loginUserInfoModel.setConstellation("sjjsjs");
+//        loginUserInfoModel.setMobilePhone("1717171717");
+//        loginUserInfoModel.setQq("272727272");
+//        loginUserInfoModel.setRealName("sxy");
+//        loginUserInfoModel.setSex(1);
+//        loginUserInfoModel.setStatus(1);
 //
 //        loginUserInfoDao.insertLoginUserInfo(loginUserInfoModel);
+//        System.out.println(loginUserInfoModel.toString());
+//
+//        LoginUserInfoModel model = loginUserInfoDao.getLoginUserInfoByUserID(1);
+//        System.out.println(model.toString());
+//
+//        loginUserInfoDao.updateLoginUserInfo(loginUserInfoModel);
 
-        LoginUserInfoModel model = loginUserInfoDao.getLoginUserInfoByUserID(1);
-        System.out.println(model.toString());
-
-        LoginUserInfoModel loginUserInfoModel = new LoginUserInfoModel();
-        loginUserInfoModel.setUserID(1);
-        loginUserInfoModel.setUserName("sunxiaobiu");
-        loginUserInfoModel.setIp("127.0.0.1");
-        loginUserInfoModel.setNickName("lalala");
-        loginUserInfoModel.setLoginStatus(2);
-        loginUserInfoModel.setPassWord("qtfrmszsxy");
-
-        loginUserInfoDao.updateLoginUserInfo(loginUserInfoModel);
-        LoginUserInfoModel model1 = loginUserInfoDao.getLoginUserInfoByUserID(1);
-        System.out.println(model1.toString());
-
-        loginUserInfoDao.deleteLoginUserInfo(1);
+        loginUserInfoDao.deleteLoginUserInfo(2);
     }
 
     @Test
@@ -101,56 +100,33 @@ public class LoginUserInfoDaoTest extends AbstractTest {
     }
 
 
-    @Test
-    public void userDetailInfoTest(){
-        UserDetailInfoModel userDetailInfoModel = new UserDetailInfoModel();
-        userDetailInfoModel.setCreatedTime(new Date());
-        userDetailInfoModel.setStatus(1);
-        userDetailInfoModel.setUserID(1);
-        userDetailInfoModel.setAddress("lalal");
-        userDetailInfoModel.setQq("773829282");
-        userDetailInfoModel.setRealName("sxysxysxysxy");
-        userDetailInfoModel.setIntroduce("lalalla");
-        userDetailInfoModel.setConstellation("msmssm");
-        userDetailInfoModel.setEmail("sjsjjsjsj@sjsjs.com");
-        userDetailInfoModel.setStarID(9);
-        userDetailInfoModel.setUpdateTime(new Date());
-
-        //userDetailInfoDao.insertUserDetailInfo(userDetailInfoModel);
-
-        userDetailInfoDao.updateUserDetailInfo(userDetailInfoModel);
-        UserDetailInfoModel model = userDetailInfoDao.getUserDetailInfoByUserID(1);
-        System.out.println(model);
-        userDetailInfoDao.deleteUserDetailInfo(1);
-
-    }
-
-    @Test
-    public void userFriendInfoDaoTest(){
-        UserFriendInfoModel userFriendInfoModel = new UserFriendInfoModel();
-        userFriendInfoModel.setUserID(1);
-        userFriendInfoModel.setFriendID(1);
-        userFriendInfoModel.setIsDelete(4);
-
-        //userFriendInfoDao.insertUserFriendInfo(userFriendInfoModel);
-        userFriendInfoDao.updateUserFriendInfo(userFriendInfoModel);
-        UserFriendInfoModel model = userFriendInfoDao.getUserFriendInfoByUserIDANDFriendID(1, 1);
-        System.out.println(model);
-        userFriendInfoDao.deleteUserFriendInfo(1, 1);
-    }
-
-    @Test
-    public void setUserPictureInfoDaoTest(){
-        UserPictureInfoModel userPictureInfoModel = new UserPictureInfoModel();
-        userPictureInfoModel.setStatus(1);
-        userPictureInfoModel.setTargetID(1);
-        userPictureInfoModel.setTargetType(2);
-        userPictureInfoModel.setUrl("uwuwuwu");
-
-        //userPictureInfoDao.insertUserPictureInfo(userPictureInfoModel);
-        userPictureInfoDao.updateUserPictureInfo(userPictureInfoModel);
-        UserPictureInfoModel model = userPictureInfoDao.getUserPictureInfoByTargetIDAndType(1,2);
-        System.out.println(model);
-        userPictureInfoDao.deleteUserPictureInfo(1,2);
-    }
+//
+//    @Test
+//    public void userFriendInfoDaoTest(){
+//        UserFriendInfoModel userFriendInfoModel = new UserFriendInfoModel();
+//        userFriendInfoModel.setUserID(1);
+//        userFriendInfoModel.setFriendID(1);
+//        userFriendInfoModel.setIsDelete(4);
+//
+//        //userFriendInfoDao.insertUserFriendInfo(userFriendInfoModel);
+//        userFriendInfoDao.updateUserFriendInfo(userFriendInfoModel);
+//        UserFriendInfoModel model = userFriendInfoDao.getUserFriendInfoByUserIDANDFriendID(1, 1);
+//        System.out.println(model);
+//        userFriendInfoDao.deleteUserFriendInfo(1, 1);
+//    }
+//
+//    @Test
+//    public void setUserPictureInfoDaoTest(){
+//        UserPictureInfoModel userPictureInfoModel = new UserPictureInfoModel();
+//        userPictureInfoModel.setStatus(1);
+//        userPictureInfoModel.setTargetID(1);
+//        userPictureInfoModel.setTargetType(2);
+//        userPictureInfoModel.setUrl("uwuwuwu");
+//
+//        //userPictureInfoDao.insertUserPictureInfo(userPictureInfoModel);
+//        userPictureInfoDao.updateUserPictureInfo(userPictureInfoModel);
+//        UserPictureInfoModel model = userPictureInfoDao.getUserPictureInfoByTargetIDAndType(1,2);
+//        System.out.println(model);
+//        userPictureInfoDao.deleteUserPictureInfo(1,2);
+//    }
 }

@@ -6,7 +6,6 @@
 
     <mappers>
         <mapper class="com.sunxiaoyu.blog.biz.dao.LoginUserInfoDao"/>
-        <mapper class="com.sunxiaoyu.blog.biz.dao.UserDetailInfoDao"/>
         <mapper class="com.sunxiaoyu.blog.biz.dao.TalkShowInfoDao"/>
         <mapper class="com.sunxiaoyu.blog.biz.dao.BlogInfoDao"/>
         <mapper class="com.sunxiaoyu.blog.biz.dao.UserFriendInfoDao"/>
